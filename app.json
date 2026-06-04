@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "UBS Finder",
+    "slug": "ubs-finder",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0077B6"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ubsfinder.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "O UBS Finder usa sua localização para encontrar as unidades de saúde mais próximas de você."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0077B6"
+      },
+      "package": "com.ubsfinder.app",
+      "permissions": ["ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}

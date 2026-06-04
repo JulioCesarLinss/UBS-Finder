@@ -1,0 +1,134 @@
+[
+  {
+    "id": "1",
+    "no_fantasia": "UBS Boa Viagem",
+    "ds_endereco": "Rua Antônio Falcão, 155",
+    "no_bairro": "Boa Viagem",
+    "tp_unidade": "UBS",
+    "latitude": -8.1167,
+    "longitude": -34.9003,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": ["Vacinação", "Consulta Clínica", "Odontologia", "Pré-natal"]
+  },
+  {
+    "id": "2",
+    "no_fantasia": "Posto de Saúde Ibura",
+    "ds_endereco": "Rua Evaristo da Veiga, 300",
+    "no_bairro": "Ibura",
+    "tp_unidade": "Posto",
+    "latitude": -8.1422,
+    "longitude": -34.9418,
+    "ds_horario": "Segunda a Sexta, 07h às 19h",
+    "servicos": ["Vacinação", "Consulta Clínica", "Curativos"]
+  },
+  {
+    "id": "3",
+    "no_fantasia": "CAPS Leste Recife",
+    "ds_endereco": "Av. Agamenon Magalhães, 2000",
+    "no_bairro": "Derby",
+    "tp_unidade": "CAPS",
+    "latitude": -8.0531,
+    "longitude": -34.8964,
+    "ds_horario": "Segunda a Sexta, 08h às 17h",
+    "servicos": ["Saúde Mental", "Psicologia", "Psiquiatria", "Grupos Terapêuticos"]
+  },
+  {
+    "id": "4",
+    "no_fantasia": "UPA 24h Recife Centro",
+    "ds_endereco": "Rua Dr. Cardoso de Melo, 500",
+    "no_bairro": "Santo Antônio",
+    "tp_unidade": "Urgência",
+    "latitude": -8.0631,
+    "longitude": -34.8738,
+    "ds_horario": "24 horas, todos os dias",
+    "servicos": ["Urgência", "Emergência", "Observação", "Raio-X"]
+  },
+  {
+    "id": "5",
+    "no_fantasia": "UBS Dois Unidos",
+    "ds_endereco": "Rua Florêncio Pessoa, 88",
+    "no_bairro": "Dois Unidos",
+    "tp_unidade": "UBS",
+    "latitude": -8.0101,
+    "longitude": -34.9152,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": ["Vacinação", "Consulta Clínica", "Pré-natal", "Puericultura"]
+  },
+  {
+    "id": "6",
+    "no_fantasia": "UBS Torrões",
+    "ds_endereco": "Rua da Paz, 410",
+    "no_bairro": "Torrões",
+    "tp_unidade": "UBS",
+    "latitude": -8.0744,
+    "longitude": -34.9588,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": ["Vacinação", "Consulta Clínica", "Odontologia"]
+  },
+  {
+    "id": "7",
+    "no_fantasia": "Posto de Saúde Mustardinha",
+    "ds_endereco": "Rua Capitão Lima, 200",
+    "no_bairro": "Mustardinha",
+    "tp_unidade": "Posto",
+    "latitude": -8.0631,
+    "longitude": -34.9401,
+    "ds_horario": "Segunda a Sexta, 08h às 18h",
+    "servicos": ["Vacinação", "Curativos", "Aferição de Pressão"]
+  },
+  {
+    "id": "8",
+    "no_fantasia": "CAPS AD Graças",
+    "ds_endereco": "Rua Barão de São Borja, 341",
+    "no_bairro": "Graças",
+    "tp_unidade": "CAPS",
+    "latitude": -8.0492,
+    "longitude": -34.9009,
+    "ds_horario": "Segunda a Sexta, 08h às 17h",
+    "servicos": ["Saúde Mental", "Tratamento de Dependência Química", "Psicologia"]
+  },
+  {
+    "id": "9",
+    "no_fantasia": "UPA 24h Norte",
+    "ds_endereco": "Estrada dos Remédios, 1100",
+    "no_bairro": "Madalena",
+    "tp_unidade": "Urgência",
+    "latitude": -8.0312,
+    "longitude": -34.9233,
+    "ds_horario": "24 horas, todos os dias",
+    "servicos": ["Urgência", "Emergência", "Sutura", "Observação"]
+  },
+  {
+    "id": "10",
+    "no_fantasia": "UBS Cohab",
+    "ds_endereco": "Rua José Mariano, 600",
+    "no_bairro": "Cohab",
+    "tp_unidade": "UBS",
+    "latitude": -8.1012,
+    "longitude": -34.9671,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": ["Vacinação", "Consulta Clínica", "Odontologia", "Nutrição"]
+  },
+  {
+    "id": "11",
+    "no_fantasia": "UBS Casa Amarela",
+    "ds_endereco": "Av. Norte Miguel Arraes, 2500",
+    "no_bairro": "Casa Amarela",
+    "tp_unidade": "UBS",
+    "latitude": -8.0201,
+    "longitude": -34.9298,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": ["Vacinação", "Consulta Clínica", "Pré-natal", "Odontologia", "Puericultura"]
+  },
+  {
+    "id": "12",
+    "no_fantasia": "Posto de Saúde Afogados",
+    "ds_endereco": "Rua Real da Torre, 800",
+    "no_bairro": "Afogados",
+    "tp_unidade": "Posto",
+    "latitude": -8.0788,
+    "longitude": -34.9112,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": ["Vacinação", "Consulta Clínica", "Curativos", "Aferição de Pressão"]
+  }
+]
