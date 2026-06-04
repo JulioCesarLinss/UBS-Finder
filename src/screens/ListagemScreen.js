@@ -71,6 +71,11 @@ export default function ListagemScreen({ navigation }) {
     listRef.current?.scrollToOffset({ offset: 420, animated: true });
   };
 
+  const handleFiltroTipo = (tipo) => {
+    setFiltroTipo(tipo);
+    setFiltroServico(null);
+  };
+
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
       <FlatList
@@ -88,7 +93,7 @@ export default function ListagemScreen({ navigation }) {
             busca={busca}
             setBusca={setBusca}
             filtroTipo={filtroTipo}
-            setFiltroTipo={setFiltroTipo}
+            setFiltroTipo={handleFiltroTipo}
             filtroServico={filtroServico}
             onAcessoRapido={handleAcessoRapido}
             cidade={cidade}
