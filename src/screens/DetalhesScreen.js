@@ -51,6 +51,13 @@ export default function DetalhesScreen({ route }) {
             label="Horário de Funcionamento"
             valor={ubs.ds_horario}
           />
+          {ubs.telefone ? (
+            <InfoLinha
+              icone="call-outline"
+              label="Telefone"
+              valor={ubs.telefone}
+            />
+          ) : null}
         </View>
 
         {/* Serviços */}
