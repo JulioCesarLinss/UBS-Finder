@@ -12,28 +12,28 @@ import { COLORS } from '../constants/colors';
 
 const ACESSO_RAPIDO = [
   {
-    id: 'ubs',
-    label: 'UBS Próximas',
-    sub: 'Encontrar agora',
-    icone: 'navigate',
-    cor: COLORS.tipoUBS,
-    filtro: 'UBS',
-  },
-  {
-    id: 'urgencia',
+    id: 'emergencia',
     label: 'Emergência',
-    sub: 'Ver disponíveis',
+    sub: '24h disponível',
     icone: 'pulse',
     cor: COLORS.tipoUrgencia,
-    filtro: 'Urgência',
+    tipo: 'Urgência',
   },
   {
-    id: 'caps',
-    label: 'CAPS',
-    sub: 'Saúde mental',
-    icone: 'people',
-    cor: COLORS.tipoCAPS,
-    filtro: 'CAPS',
+    id: 'vacinacao',
+    label: 'Vacinação',
+    sub: 'Postos disponíveis',
+    icone: 'medical',
+    cor: '#38B000',
+    servico: 'Vacinação',
+  },
+  {
+    id: 'odontologia',
+    label: 'Odontologia',
+    sub: 'Saúde bucal',
+    icone: 'happy-outline',
+    cor: '#2A9D8F',
+    servico: 'Odontologia',
   },
   {
     id: 'favoritos',
@@ -41,14 +41,18 @@ const ACESSO_RAPIDO = [
     sub: 'Suas UBS salvas',
     icone: 'heart',
     cor: '#4BB8E8',
-    filtro: null,
     navFavoritos: true,
   },
 ];
 
 export default function ListagemScreen({ navigation }) {
   const { localizacao, cidade, carregando: carregandoGPS } = useLocalizacao();
-  const { busca, setBusca, filtroTipo, setFiltroTipo, resultado } = useUBSFiltro(localizacao);
+  const {
+    busca, setBusca,
+    filtroTipo, setFiltroTipo,
+    filtroServico, setFiltroServico,
+    resultado,
+  } = useUBSFiltro(localizacao);
   const listRef = useRef(null);
 
   const handleAcessoRapido = (item) => {
@@ -56,7 +60,14 @@ export default function ListagemScreen({ navigation }) {
       navigation.navigate('Favoritos');
       return;
     }
-    setFiltroTipo(item.filtro === filtroTipo ? null : item.filtro);
+    if (item.tipo) {
+      setFiltroTipo(filtroTipo === item.tipo ? null : item.tipo);
+      setFiltroServico(null);
+    }
+    if (item.servico) {
+      setFiltroServico(filtroServico === item.servico ? null : item.servico);
+      setFiltroTipo(null);
+    }
     listRef.current?.scrollToOffset({ offset: 420, animated: true });
   };
 
@@ -78,6 +89,7 @@ export default function ListagemScreen({ navigation }) {
             setBusca={setBusca}
             filtroTipo={filtroTipo}
             setFiltroTipo={setFiltroTipo}
+            filtroServico={filtroServico}
             onAcessoRapido={handleAcessoRapido}
             cidade={cidade}
             carregandoGPS={carregandoGPS}
@@ -94,7 +106,7 @@ export default function ListagemScreen({ navigation }) {
   );
 }
 
-function ListHeader({ busca, setBusca, filtroTipo, setFiltroTipo, onAcessoRapido, cidade, carregandoGPS }) {
+function ListHeader({ busca, setBusca, filtroTipo, setFiltroTipo, filtroServico, onAcessoRapido, cidade, carregandoGPS }) {
   return (
     <View>
       {/* Header azul */}
@@ -124,7 +136,10 @@ function ListHeader({ busca, setBusca, filtroTipo, setFiltroTipo, onAcessoRapido
       <Text style={styles.secaoTitulo}>Acesso Rápido</Text>
       <View style={styles.grid}>
         {ACESSO_RAPIDO.map((item) => {
-          const ativo = !item.navFavoritos && filtroTipo === item.filtro;
+          const ativo =
+            !item.navFavoritos &&
+            ((item.tipo && filtroTipo === item.tipo) ||
+              (item.servico && filtroServico === item.servico));
           return (
             <TouchableOpacity
               key={item.id}

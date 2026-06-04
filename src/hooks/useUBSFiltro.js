@@ -5,6 +5,7 @@ import { calcularDistanciaKm } from '../utils/distancia';
 export function useUBSFiltro(localizacao) {
   const [busca, setBusca] = useState('');
   const [filtroTipo, setFiltroTipo] = useState(null);
+  const [filtroServico, setFiltroServico] = useState(null);
   const [resultado, setResultado] = useState(dados);
 
   useEffect(() => {
@@ -12,6 +13,10 @@ export function useUBSFiltro(localizacao) {
 
     if (filtroTipo) {
       lista = lista.filter((u) => u.tp_unidade === filtroTipo);
+    }
+
+    if (filtroServico) {
+      lista = lista.filter((u) => u.servicos.includes(filtroServico));
     }
 
     if (busca.trim().length > 0) {
@@ -38,7 +43,12 @@ export function useUBSFiltro(localizacao) {
     }
 
     setResultado(lista);
-  }, [busca, filtroTipo, localizacao]);
+  }, [busca, filtroTipo, filtroServico, localizacao]);
 
-  return { busca, setBusca, filtroTipo, setFiltroTipo, resultado };
+  return {
+    busca, setBusca,
+    filtroTipo, setFiltroTipo,
+    filtroServico, setFiltroServico,
+    resultado,
+  };
 }
