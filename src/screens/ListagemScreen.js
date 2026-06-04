@@ -1,12 +1,15 @@
 import React, { useRef } from 'react';
-import { View, Text, FlatList, StyleSheet, TouchableOpacity, ActivityIndicator } from 'react-native';
+import {
+  View, Text, FlatList, StyleSheet,
+  TouchableOpacity, ActivityIndicator,
+} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import SearchBar from '../components/SearchBar';
 import FilterBar from '../components/FilterBar';
 import UBSCard from '../components/UBSCard';
 import EmptyState from '../components/EmptyState';
-import { useUBSFiltro } from '../hooks/useUBSFiltro';
+import { useUBSData } from '../hooks/useUBSData';
 import { useLocalizacao } from '../hooks/useLocalizacao';
 import { COLORS } from '../constants/colors';
 
@@ -40,7 +43,7 @@ const ACESSO_RAPIDO = [
     label: 'Favoritos',
     sub: 'Suas UBS salvas',
     icone: 'heart',
-    cor: '#4BB8E8',
+    cor: '#4BB8E4',
     navFavoritos: true,
   },
 ];
@@ -52,8 +55,18 @@ export default function ListagemScreen({ navigation }) {
     filtroTipo, setFiltroTipo,
     filtroServico, setFiltroServico,
     resultado,
-  } = useUBSFiltro(localizacao);
+    statusDados,
+    erroApi,
+    recarregar,
+    totalDados,
+  } = useUBSData(localizacao);
+
   const listRef = useRef(null);
+
+  const handleFiltroTipo = (tipo) => {
+    setFiltroTipo(tipo);
+    setFiltroServico(null);
+  };
 
   const handleAcessoRapido = (item) => {
     if (item.navFavoritos) {
@@ -71,17 +84,12 @@ export default function ListagemScreen({ navigation }) {
     listRef.current?.scrollToOffset({ offset: 420, animated: true });
   };
 
-  const handleFiltroTipo = (tipo) => {
-    setFiltroTipo(tipo);
-    setFiltroServico(null);
-  };
-
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
       <FlatList
         ref={listRef}
         data={resultado}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => String(item.id)}
         renderItem={({ item }) => (
           <UBSCard
             item={item}
@@ -98,10 +106,16 @@ export default function ListagemScreen({ navigation }) {
             onAcessoRapido={handleAcessoRapido}
             cidade={cidade}
             carregandoGPS={carregandoGPS}
+            statusDados={statusDados}
+            erroApi={erroApi}
+            recarregar={recarregar}
+            totalDados={totalDados}
           />
         }
         ListEmptyComponent={
-          <EmptyState mensagem="Nenhuma unidade encontrada para essa busca." />
+          statusDados === 'loading' ? null : (
+            <EmptyState mensagem="Nenhuma unidade encontrada para essa busca." />
+          )
         }
         contentContainerStyle={styles.lista}
         keyboardShouldPersistTaps="handled"
@@ -111,10 +125,18 @@ export default function ListagemScreen({ navigation }) {
   );
 }
 
-function ListHeader({ busca, setBusca, filtroTipo, setFiltroTipo, filtroServico, onAcessoRapido, cidade, carregandoGPS }) {
+// ─── Subcomponente de cabeçalho ──────────────────────────────────────────────
+
+function ListHeader({
+  busca, setBusca,
+  filtroTipo, setFiltroTipo,
+  filtroServico, onAcessoRapido,
+  cidade, carregandoGPS,
+  statusDados, erroApi, recarregar, totalDados,
+}) {
   return (
     <View>
-      {/* Header azul */}
+      {/* Cabeçalho azul */}
       <View style={styles.header}>
         <View style={styles.headerEsquerda}>
           <Ionicons name="location" size={20} color={COLORS.white} />
@@ -136,6 +158,14 @@ function ListHeader({ busca, setBusca, filtroTipo, setFiltroTipo, filtroServico,
       <View style={styles.searchWrapper}>
         <SearchBar value={busca} onChangeText={setBusca} />
       </View>
+
+      {/* Banner de status da fonte de dados */}
+      <FonteBanner
+        statusDados={statusDados}
+        erroApi={erroApi}
+        recarregar={recarregar}
+        totalDados={totalDados}
+      />
 
       {/* Acesso Rápido */}
       <Text style={styles.secaoTitulo}>Acesso Rápido</Text>
@@ -169,6 +199,50 @@ function ListHeader({ busca, setBusca, filtroTipo, setFiltroTipo, filtroServico,
     </View>
   );
 }
+
+// ─── Banner que indica a origem dos dados ────────────────────────────────────
+
+function FonteBanner({ statusDados, erroApi, recarregar, totalDados }) {
+  if (statusDados === 'idle') return null;
+
+  if (statusDados === 'loading') {
+    return (
+      <View style={[styles.banner, styles.bannerInfo]}>
+        <ActivityIndicator size="small" color={COLORS.primary} style={{ marginRight: 8 }} />
+        <Text style={styles.bannerTexto}>Buscando unidades próximas (CNES/DATASUS)…</Text>
+      </View>
+    );
+  }
+
+  if (statusDados === 'api') {
+    return (
+      <View style={[styles.banner, styles.bannerSucesso]}>
+        <Ionicons name="checkmark-circle" size={16} color="#38B000" />
+        <Text style={[styles.bannerTexto, { color: '#2A7A00' }]}>
+          {totalDados} unidades reais (CNES/DATASUS)
+        </Text>
+      </View>
+    );
+  }
+
+  // statusDados === 'local'
+  return (
+    <View style={[styles.banner, styles.bannerAviso]}>
+      <Ionicons name="cloud-offline-outline" size={16} color="#B45309" />
+      <Text style={[styles.bannerTexto, { flex: 1, color: '#92400E' }]}>
+        {erroApi || 'Dados locais (sem conexão com CNES)'}
+      </Text>
+      {recarregar && (
+        <TouchableOpacity onPress={recarregar} style={styles.bannerBotao}>
+          <Ionicons name="refresh" size={15} color={COLORS.primary} />
+          <Text style={styles.bannerBotaoTexto}>Tentar</Text>
+        </TouchableOpacity>
+      )}
+    </View>
+  );
+}
+
+// ─── Estilos ─────────────────────────────────────────────────────────────────
 
 const styles = StyleSheet.create({
   container: {
@@ -226,6 +300,47 @@ const styles = StyleSheet.create({
     marginTop: -20,
     marginHorizontal: 16,
     marginBottom: 8,
+  },
+
+  /* Banner de status */
+  banner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginHorizontal: 16,
+    marginTop: 8,
+    marginBottom: 4,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    borderRadius: 10,
+    gap: 8,
+  },
+  bannerInfo: {
+    backgroundColor: COLORS.primaryLight,
+  },
+  bannerSucesso: {
+    backgroundColor: '#ECFCE4',
+  },
+  bannerAviso: {
+    backgroundColor: '#FEF3C7',
+  },
+  bannerTexto: {
+    fontSize: 13,
+    color: COLORS.textSecondary,
+    flexShrink: 1,
+  },
+  bannerBotao: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 3,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 8,
+    backgroundColor: COLORS.primaryLight,
+  },
+  bannerBotaoTexto: {
+    fontSize: 12,
+    color: COLORS.primary,
+    fontWeight: '600',
   },
 
   /* Seções */
