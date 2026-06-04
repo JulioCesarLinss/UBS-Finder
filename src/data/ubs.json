@@ -34,7 +34,7 @@
   },
   {
     "id": "4",
-    "no_fantasia": "UPA 24h Recife Centro",
+    "no_fantasia": "UPA 24h Centro",
     "ds_endereco": "Rua Dr. Cardoso de Melo, 500",
     "no_bairro": "Santo Antônio",
     "tp_unidade": "Urgência",
@@ -130,5 +130,93 @@
     "longitude": -34.9112,
     "ds_horario": "Segunda a Sexta, 07h às 17h",
     "servicos": ["Vacinação", "Consulta Clínica", "Curativos", "Aferição de Pressão"]
+  },
+  {
+    "id": "13",
+    "no_fantasia": "UBS Encruzilhada",
+    "ds_endereco": "Rua Capibaribe, 520",
+    "no_bairro": "Encruzilhada",
+    "tp_unidade": "UBS",
+    "latitude": -8.0385,
+    "longitude": -34.9079,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": ["Vacinação", "Consulta Clínica", "Pré-natal", "Nutrição"]
+  },
+  {
+    "id": "14",
+    "no_fantasia": "Posto de Saúde Várzea",
+    "ds_endereco": "Rua João de Barros, 1040",
+    "no_bairro": "Várzea",
+    "tp_unidade": "Posto",
+    "latitude": -8.0527,
+    "longitude": -34.9487,
+    "ds_horario": "Segunda a Sexta, 07h às 19h",
+    "servicos": ["Vacinação", "Consulta Clínica", "Curativos", "Coleta de Exames"]
+  },
+  {
+    "id": "15",
+    "no_fantasia": "UPA 24h Torrão",
+    "ds_endereco": "Av. Mascarenhas de Morais, 3950",
+    "no_bairro": "Imbiribeira",
+    "tp_unidade": "Urgência",
+    "latitude": -8.1001,
+    "longitude": -34.9398,
+    "ds_horario": "24 horas, todos os dias",
+    "servicos": ["Urgência", "Emergência", "Observação", "Medicamentos"]
+  },
+  {
+    "id": "16",
+    "no_fantasia": "UBS Imbiribeira",
+    "ds_endereco": "Rua Capitão Temudo, 310",
+    "no_bairro": "Imbiribeira",
+    "tp_unidade": "UBS",
+    "latitude": -8.0989,
+    "longitude": -34.9274,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": ["Vacinação", "Consulta Clínica", "Odontologia", "Pré-natal", "Puericultura"]
+  },
+  {
+    "id": "17",
+    "no_fantasia": "CAPS Infanto-Juvenil Recife",
+    "ds_endereco": "Rua Henrique Dias, 701",
+    "no_bairro": "Derby",
+    "tp_unidade": "CAPS",
+    "latitude": -8.0562,
+    "longitude": -34.8998,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": ["Saúde Mental", "Psicologia", "Fonoaudiologia", "Terapia Ocupacional"]
+  },
+  {
+    "id": "18",
+    "no_fantasia": "UBS Peixinhos",
+    "ds_endereco": "Rua São Paulo, 88",
+    "no_bairro": "Peixinhos",
+    "tp_unidade": "UBS",
+    "latitude": -7.9922,
+    "longitude": -34.8948,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": ["Vacinação", "Consulta Clínica", "Curativos"]
+  },
+  {
+    "id": "19",
+    "no_fantasia": "Posto de Saúde Cajueiro Seco",
+    "ds_endereco": "Rua Benedita Maria, 150",
+    "no_bairro": "Cajueiro Seco",
+    "tp_unidade": "Posto",
+    "latitude": -8.1631,
+    "longitude": -35.0052,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": ["Vacinação", "Consulta Clínica", "Aferição de Pressão"]
+  },
+  {
+    "id": "20",
+    "no_fantasia": "UBS Alto José do Pinho",
+    "ds_endereco": "Rua das Ameixeiras, 300",
+    "no_bairro": "Alto José do Pinho",
+    "tp_unidade": "UBS",
+    "latitude": -8.0147,
+    "longitude": -34.9398,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": ["Vacinação", "Consulta Clínica", "Pré-natal", "Odontologia"]
   }
 ]
