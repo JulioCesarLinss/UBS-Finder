@@ -5,6 +5,7 @@ import {
   ScrollView,
   TouchableOpacity,
   StyleSheet,
+  Share,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
@@ -17,6 +18,12 @@ import { TIPO_CORES } from '../constants/tipos';
 export default function DetalhesScreen({ route }) {
   const { ubs } = route.params;
   const { isFavorito, carregarFavoritos, toggleFavorito } = useFavoritos(ubs.id);
+
+  const compartilhar = async () => {
+    await Share.share({
+      message: `🏥 ${ubs.no_fantasia}\n📍 ${ubs.ds_endereco} — ${ubs.no_bairro}\n⏰ ${ubs.ds_horario}\n\nEncontrado pelo UBS Finder`,
+    });
+  };
 
   const corTipo = TIPO_CORES[ubs.tp_unidade] || COLORS.primary;
 
@@ -82,21 +89,33 @@ export default function DetalhesScreen({ route }) {
             <Text style={styles.botaoTextoPrimario}>Abrir no Maps</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity
-            style={[styles.botao, styles.botaoSecundario, isFavorito && styles.botaoFavoritoAtivo]}
-            onPress={() => toggleFavorito(ubs)}
-            activeOpacity={0.85}
-            accessibilityLabel={isFavorito ? 'Remover dos favoritos' : 'Salvar nos favoritos'}
-          >
-            <Ionicons
-              name={isFavorito ? 'star' : 'star-outline'}
-              size={20}
-              color={isFavorito ? COLORS.white : COLORS.primary}
-            />
-            <Text style={[styles.botaoTextoSecundario, isFavorito && styles.botaoTextoBranco]}>
-              {isFavorito ? 'Salvo nos Favoritos' : 'Salvar Favorito'}
-            </Text>
-          </TouchableOpacity>
+          <View style={styles.botoesLinha}>
+            <TouchableOpacity
+              style={[styles.botao, styles.botaoSecundario, isFavorito && styles.botaoFavoritoAtivo, { flex: 1 }]}
+              onPress={() => toggleFavorito(ubs)}
+              activeOpacity={0.85}
+              accessibilityLabel={isFavorito ? 'Remover dos favoritos' : 'Salvar nos favoritos'}
+            >
+              <Ionicons
+                name={isFavorito ? 'star' : 'star-outline'}
+                size={20}
+                color={isFavorito ? COLORS.white : COLORS.primary}
+              />
+              <Text style={[styles.botaoTextoSecundario, isFavorito && styles.botaoTextoBranco]}>
+                {isFavorito ? 'Salvo' : 'Favoritar'}
+              </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={[styles.botao, styles.botaoSecundario, { flex: 1 }]}
+              onPress={compartilhar}
+              activeOpacity={0.85}
+              accessibilityLabel="Compartilhar esta unidade"
+            >
+              <Ionicons name="share-social-outline" size={20} color={COLORS.primary} />
+              <Text style={styles.botaoTextoSecundario}>Compartilhar</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -211,6 +230,10 @@ const styles = StyleSheet.create({
   botoes: {
     gap: 12,
     marginTop: 4,
+  },
+  botoesLinha: {
+    flexDirection: 'row',
+    gap: 12,
   },
   botao: {
     flexDirection: 'row',

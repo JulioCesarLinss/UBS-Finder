@@ -13,7 +13,7 @@
  *   turnoAtendimento, vinculoSus, lat, long, telefone
  */
 
-const BASE_URL = 'http://mobile-aceite.tcu.gov.br/mapa-da-saude/rest/estabelecimentos';
+const BASE_URL = 'https://mobile-aceite.tcu.gov.br/mapa-da-saude/rest/estabelecimentos';
 
 // Timeout de 8s para não deixar o usuário esperando
 const TIMEOUT_MS = 8000;

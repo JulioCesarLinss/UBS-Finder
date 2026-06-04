@@ -110,6 +110,7 @@ export default function ListagemScreen({ navigation }) {
             erroApi={erroApi}
             recarregar={recarregar}
             totalDados={totalDados}
+            totalResultados={resultado.length}
           />
         }
         ListEmptyComponent={
@@ -133,6 +134,7 @@ function ListHeader({
   filtroServico, onAcessoRapido,
   cidade, carregandoGPS,
   statusDados, erroApi, recarregar, totalDados,
+  totalResultados,
 }) {
   return (
     <View>
@@ -148,9 +150,6 @@ function ListHeader({
               <Text style={styles.headerLocal}>{cidade}</Text>
             )}
           </View>
-        </View>
-        <View style={styles.avatar}>
-          <Text style={styles.avatarTexto}>U</Text>
         </View>
       </View>
 
@@ -196,6 +195,9 @@ function ListHeader({
       {/* Título da lista + filtros */}
       <Text style={styles.secaoTitulo}>Unidades de Saúde</Text>
       <FilterBar ativo={filtroTipo} onChange={setFiltroTipo} />
+      <Text style={styles.contador}>
+        {totalResultados} {totalResultados === 1 ? 'unidade encontrada' : 'unidades encontradas'}
+      </Text>
     </View>
   );
 }
@@ -225,21 +227,8 @@ function FonteBanner({ statusDados, erroApi, recarregar, totalDados }) {
     );
   }
 
-  // statusDados === 'local'
-  return (
-    <View style={[styles.banner, styles.bannerAviso]}>
-      <Ionicons name="cloud-offline-outline" size={16} color="#B45309" />
-      <Text style={[styles.bannerTexto, { flex: 1, color: '#92400E' }]}>
-        {erroApi || 'Dados locais (sem conexão com CNES)'}
-      </Text>
-      {recarregar && (
-        <TouchableOpacity onPress={recarregar} style={styles.bannerBotao}>
-          <Ionicons name="refresh" size={15} color={COLORS.primary} />
-          <Text style={styles.bannerBotaoTexto}>Tentar</Text>
-        </TouchableOpacity>
-      )}
-    </View>
-  );
+  // statusDados === 'local' — fallback silencioso, não exibe aviso
+  return null;
 }
 
 // ─── Estilos ─────────────────────────────────────────────────────────────────
@@ -341,6 +330,14 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: COLORS.primary,
     fontWeight: '600',
+  },
+
+  contador: {
+    fontSize: 13,
+    color: COLORS.textSecondary,
+    marginHorizontal: 16,
+    marginTop: 8,
+    marginBottom: 4,
   },
 
   /* Seções */
