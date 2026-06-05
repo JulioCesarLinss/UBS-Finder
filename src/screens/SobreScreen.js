@@ -91,12 +91,6 @@ export default function SobreScreen() {
           <Text style={styles.rodapeTexto}>
             Dados: CNES — Cadastro Nacional de Estabelecimentos de Saúde
           </Text>
-          <Text style={styles.rodapeTexto}>
-            Universidade Católica de Pernambuco — UNICAP
-          </Text>
-          <Text style={styles.rodapeTexto}>
-            Programação Web e Mobile | 2026.1
-          </Text>
         </View>
       </ScrollView>
     </SafeAreaView>

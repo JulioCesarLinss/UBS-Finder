@@ -155,7 +155,7 @@ function ListHeader({
 
       {/* SearchBar sobreposta ao header */}
       <View style={styles.searchWrapper}>
-        <SearchBar value={busca} onChangeText={setBusca} />
+        <SearchBar value={busca} onChangeText={setBusca} placeholder="Buscar por nome, bairro ou rua..." />
       </View>
 
       {/* Banner de status da fonte de dados */}

@@ -12,6 +12,6 @@ export function calcularDistanciaKm(lat1, lon1, lat2, lon2) {
 }
 
 export function formatarDistancia(km) {
-  if (km < 1) return `${Math.round(km * 1000)} m`;
-  return `${km.toFixed(1)} km`;
+  if (km < 1) return `~${Math.round(km * 1000)} m`;
+  return `~${km.toFixed(1)} km`;
 }

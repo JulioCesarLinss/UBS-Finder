@@ -1,6 +1,9 @@
 # Dependências
 node_modules/
 
+# Base de dados CNES (arquivos grandes, não vão pro repositório)
+base_de_dados/
+
 # Expo
 .expo/
 dist/

@@ -24,7 +24,8 @@ export function useUBSFiltro(localizacao) {
       lista = lista.filter(
         (u) =>
           u.no_fantasia.toLowerCase().includes(termo) ||
-          u.no_bairro.toLowerCase().includes(termo)
+          u.no_bairro.toLowerCase().includes(termo) ||
+          u.ds_endereco.toLowerCase().includes(termo)
       );
     }
 

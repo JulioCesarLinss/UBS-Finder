@@ -11,6 +11,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { useFavoritos } from '../hooks/useFavoritos';
 import { openGoogleMaps } from '../utils/maps';
+import { labelAberto } from '../utils/horario';
 import ServicosBadge from '../components/ServicosBadge';
 import { COLORS } from '../constants/colors';
 import { TIPO_CORES } from '../constants/tipos';
@@ -26,6 +27,7 @@ export default function DetalhesScreen({ route }) {
   };
 
   const corTipo = TIPO_CORES[ubs.tp_unidade] || COLORS.primary;
+  const statusAberto = labelAberto(ubs.ds_horario);
 
   useEffect(() => {
     carregarFavoritos();
@@ -57,6 +59,7 @@ export default function DetalhesScreen({ route }) {
             icone="time-outline"
             label="Horário de Funcionamento"
             valor={ubs.ds_horario}
+            status={statusAberto}
           />
           {ubs.telefone ? (
             <InfoLinha
@@ -116,19 +119,26 @@ export default function DetalhesScreen({ route }) {
               <Text style={styles.botaoTextoSecundario}>Compartilhar</Text>
             </TouchableOpacity>
           </View>
+
         </View>
       </ScrollView>
     </SafeAreaView>
   );
 }
 
-function InfoLinha({ icone, label, valor }) {
+function InfoLinha({ icone, label, valor, status }) {
   return (
     <View style={styles.infoLinha}>
       <Ionicons name={icone} size={22} color={COLORS.primary} style={styles.infoIcone} />
       <View style={styles.infoTextos}>
         <Text style={styles.infoLabel}>{label}</Text>
         <Text style={styles.infoValor}>{valor}</Text>
+        {status && (
+          <View style={[styles.statusTag, { backgroundColor: status.cor + '22' }]}>
+            <View style={[styles.statusDot, { backgroundColor: status.cor }]} />
+            <Text style={[styles.statusTexto, { color: status.cor }]}>{status.texto}</Text>
+          </View>
+        )}
       </View>
     </View>
   );
@@ -221,6 +231,25 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: COLORS.text,
     lineHeight: 22,
+  },
+  statusTag: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+    alignSelf: 'flex-start',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 20,
+    marginTop: 6,
+  },
+  statusDot: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+  },
+  statusTexto: {
+    fontSize: 13,
+    fontWeight: '700',
   },
   servicosContainer: {
     flexDirection: 'row',

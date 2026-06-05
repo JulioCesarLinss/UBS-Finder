@@ -14,4 +14,5 @@ export const COLORS = {
   tipoPosto: '#2A9D8F',
   tipoCAPS: '#7B2D8B',
   tipoUrgencia: '#E63946',
+  tipoPoliclinica: '#E76F00',
 };

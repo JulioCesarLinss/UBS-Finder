@@ -1,222 +1,613 @@
 [
   {
     "id": "1",
-    "no_fantasia": "UBS Boa Viagem",
-    "ds_endereco": "Rua Antônio Falcão, 155",
-    "no_bairro": "Boa Viagem",
+    "co_cnes": "0001198",
+    "no_fantasia": "US 113 - Dr. Aristarcho Dourado de Azevedo",
+    "ds_endereco": "Rua Bahia, 29",
+    "no_bairro": "Jordão Baixo",
     "tp_unidade": "UBS",
-    "latitude": -8.1167,
-    "longitude": -34.9003,
+    "latitude": -8.1330309,
+    "longitude": -34.9364028,
     "ds_horario": "Segunda a Sexta, 07h às 17h",
-    "servicos": ["Vacinação", "Consulta Clínica", "Odontologia", "Pré-natal"]
+    "servicos": [
+      "Vacinação",
+      "Consulta Clínica",
+      "Pré-natal",
+      "Odontologia"
+    ]
   },
   {
     "id": "2",
-    "no_fantasia": "Posto de Saúde Ibura",
-    "ds_endereco": "Rua Evaristo da Veiga, 300",
-    "no_bairro": "Ibura",
-    "tp_unidade": "Posto",
-    "latitude": -8.1422,
-    "longitude": -34.9418,
-    "ds_horario": "Segunda a Sexta, 07h às 19h",
-    "servicos": ["Vacinação", "Consulta Clínica", "Curativos"]
+    "co_cnes": "0001236",
+    "no_fantasia": "US 152 - Ina Rosa Borges",
+    "ds_endereco": "Rua Senador Milton Campos, S/N",
+    "no_bairro": "Vasco da Gama",
+    "tp_unidade": "UBS",
+    "latitude": -8.0152924,
+    "longitude": -34.9220422,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": [
+      "Vacinação",
+      "Consulta Clínica",
+      "Pré-natal",
+      "Odontologia"
+    ]
   },
   {
     "id": "3",
-    "no_fantasia": "CAPS Leste Recife",
-    "ds_endereco": "Av. Agamenon Magalhães, 2000",
-    "no_bairro": "Derby",
-    "tp_unidade": "CAPS",
-    "latitude": -8.0531,
-    "longitude": -34.8964,
-    "ds_horario": "Segunda a Sexta, 08h às 17h",
-    "servicos": ["Saúde Mental", "Psicologia", "Psiquiatria", "Grupos Terapêuticos"]
+    "co_cnes": "0001317",
+    "no_fantasia": "US 120 - Mário Monteiro Melo",
+    "ds_endereco": "Rua Nova Descoberta, 99",
+    "no_bairro": "Nova Descoberta",
+    "tp_unidade": "UBS",
+    "latitude": -8.0011125,
+    "longitude": -34.9235438,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": [
+      "Vacinação",
+      "Consulta Clínica",
+      "Pré-natal",
+      "Odontologia"
+    ]
   },
   {
     "id": "4",
-    "no_fantasia": "UPA 24h Centro",
-    "ds_endereco": "Rua Dr. Cardoso de Melo, 500",
-    "no_bairro": "Santo Antônio",
-    "tp_unidade": "Urgência",
-    "latitude": -8.0631,
-    "longitude": -34.8738,
-    "ds_horario": "24 horas, todos os dias",
-    "servicos": ["Urgência", "Emergência", "Observação", "Raio-X"]
+    "co_cnes": "0001414",
+    "no_fantasia": "US 117 - Gaspar Regueira Costa",
+    "ds_endereco": "Rua Padre Diogo Rodrigues, 144",
+    "no_bairro": "Barro",
+    "tp_unidade": "UBS",
+    "latitude": -8.0888796,
+    "longitude": -34.9379383,
+    "ds_horario": "Segunda a Sexta, 07h às 22h",
+    "servicos": [
+      "Vacinação",
+      "Consulta Clínica",
+      "Pré-natal",
+      "Odontologia"
+    ]
   },
   {
     "id": "5",
-    "no_fantasia": "UBS Dois Unidos",
-    "ds_endereco": "Rua Florêncio Pessoa, 88",
-    "no_bairro": "Dois Unidos",
+    "co_cnes": "0026360",
+    "no_fantasia": "US 268 - Cafezópolis",
+    "ds_endereco": "Rua Cafezopolis, 1920",
+    "no_bairro": "Imbiribeira",
     "tp_unidade": "UBS",
-    "latitude": -8.0101,
-    "longitude": -34.9152,
+    "latitude": -8.062763,
+    "longitude": -34.88895,
     "ds_horario": "Segunda a Sexta, 07h às 17h",
-    "servicos": ["Vacinação", "Consulta Clínica", "Pré-natal", "Puericultura"]
+    "servicos": [
+      "Vacinação",
+      "Consulta Clínica",
+      "Pré-natal",
+      "Odontologia"
+    ]
   },
   {
     "id": "6",
-    "no_fantasia": "UBS Torrões",
-    "ds_endereco": "Rua da Paz, 410",
-    "no_bairro": "Torrões",
+    "co_cnes": "0028053",
+    "no_fantasia": "US 258 - Sítio dos Pintos",
+    "ds_endereco": "Rua Pref Agostinho Nunes Machado, S/N",
+    "no_bairro": "Sítio dos Pintos",
     "tp_unidade": "UBS",
-    "latitude": -8.0744,
-    "longitude": -34.9588,
+    "latitude": -8.05554,
+    "longitude": -34.882,
     "ds_horario": "Segunda a Sexta, 07h às 17h",
-    "servicos": ["Vacinação", "Consulta Clínica", "Odontologia"]
+    "servicos": [
+      "Vacinação",
+      "Consulta Clínica",
+      "Pré-natal",
+      "Odontologia"
+    ]
   },
   {
     "id": "7",
-    "no_fantasia": "Posto de Saúde Mustardinha",
-    "ds_endereco": "Rua Capitão Lima, 200",
-    "no_bairro": "Mustardinha",
-    "tp_unidade": "Posto",
-    "latitude": -8.0631,
-    "longitude": -34.9401,
-    "ds_horario": "Segunda a Sexta, 08h às 18h",
-    "servicos": ["Vacinação", "Curativos", "Aferição de Pressão"]
+    "co_cnes": "0028045",
+    "no_fantasia": "US 257 - Gilberto Freyre Bola na Rede",
+    "ds_endereco": "Av. Padre Mosca de Carvalho, S/N",
+    "no_bairro": "Guabiraba",
+    "tp_unidade": "UBS",
+    "latitude": -7.962691,
+    "longitude": -34.9237455,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": [
+      "Vacinação",
+      "Consulta Clínica",
+      "Pré-natal",
+      "Odontologia"
+    ]
   },
   {
     "id": "8",
-    "no_fantasia": "CAPS AD Graças",
-    "ds_endereco": "Rua Barão de São Borja, 341",
-    "no_bairro": "Graças",
-    "tp_unidade": "CAPS",
-    "latitude": -8.0492,
-    "longitude": -34.9009,
-    "ds_horario": "Segunda a Sexta, 08h às 17h",
-    "servicos": ["Saúde Mental", "Tratamento de Dependência Química", "Psicologia"]
+    "co_cnes": "9643486",
+    "no_fantasia": "UPA Caxanga",
+    "ds_endereco": "Professor Moraes Rego, 314",
+    "no_bairro": "Várzea",
+    "tp_unidade": "Urgência",
+    "latitude": -8.041420500000001,
+    "longitude": -34.94353750329799,
+    "ds_horario": "24 horas, todos os dias",
+    "servicos": [
+      "Urgência",
+      "Emergência",
+      "Observação"
+    ]
   },
   {
     "id": "9",
-    "no_fantasia": "UPA 24h Norte",
-    "ds_endereco": "Estrada dos Remédios, 1100",
-    "no_bairro": "Madalena",
-    "tp_unidade": "Urgência",
-    "latitude": -8.0312,
-    "longitude": -34.9233,
-    "ds_horario": "24 horas, todos os dias",
-    "servicos": ["Urgência", "Emergência", "Sutura", "Observação"]
+    "co_cnes": "0022349",
+    "no_fantasia": "US 235 - Roda de Fogo Sinos",
+    "ds_endereco": "Rua dos Sinos, 35",
+    "no_bairro": "Torrões",
+    "tp_unidade": "UBS",
+    "latitude": -8.0551049,
+    "longitude": -34.9385976,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": [
+      "Vacinação",
+      "Consulta Clínica",
+      "Pré-natal",
+      "Odontologia"
+    ]
   },
   {
     "id": "10",
-    "no_fantasia": "UBS Cohab",
-    "ds_endereco": "Rua José Mariano, 600",
-    "no_bairro": "Cohab",
+    "co_cnes": "9384324",
+    "no_fantasia": "US 404 - Santo Amaro III",
+    "ds_endereco": "Av. Norte Miguel Arraes de Alencar, 1271",
+    "no_bairro": "Santo Amaro",
     "tp_unidade": "UBS",
-    "latitude": -8.1012,
-    "longitude": -34.9671,
+    "latitude": -8.043677500000001,
+    "longitude": -34.883487715527636,
     "ds_horario": "Segunda a Sexta, 07h às 17h",
-    "servicos": ["Vacinação", "Consulta Clínica", "Odontologia", "Nutrição"]
+    "servicos": [
+      "Vacinação",
+      "Consulta Clínica",
+      "Pré-natal",
+      "Odontologia"
+    ]
   },
   {
     "id": "11",
-    "no_fantasia": "UBS Casa Amarela",
-    "ds_endereco": "Av. Norte Miguel Arraes, 2500",
-    "no_bairro": "Casa Amarela",
+    "co_cnes": "7884885",
+    "no_fantasia": "CENIP Santa Luzia",
+    "ds_endereco": "Av. Abdias de Carvalho, S/N",
+    "no_bairro": "Bongi",
     "tp_unidade": "UBS",
-    "latitude": -8.0201,
-    "longitude": -34.9298,
-    "ds_horario": "Segunda a Sexta, 07h às 17h",
-    "servicos": ["Vacinação", "Consulta Clínica", "Pré-natal", "Odontologia", "Puericultura"]
+    "latitude": -8.0601,
+    "longitude": -34.9289089,
+    "ds_horario": "24 horas, todos os dias",
+    "servicos": [
+      "Vacinação",
+      "Consulta Clínica",
+      "Pré-natal",
+      "Odontologia"
+    ]
   },
   {
     "id": "12",
-    "no_fantasia": "Posto de Saúde Afogados",
-    "ds_endereco": "Rua Real da Torre, 800",
-    "no_bairro": "Afogados",
-    "tp_unidade": "Posto",
-    "latitude": -8.0788,
-    "longitude": -34.9112,
-    "ds_horario": "Segunda a Sexta, 07h às 17h",
-    "servicos": ["Vacinação", "Consulta Clínica", "Curativos", "Aferição de Pressão"]
+    "co_cnes": "6726852",
+    "no_fantasia": "UPA Ibura",
+    "ds_endereco": "Rua Vale do Itajai, S/N",
+    "no_bairro": "Ibura",
+    "tp_unidade": "Urgência",
+    "latitude": -8.128676003860656,
+    "longitude": -34.94944095611572,
+    "ds_horario": "24 horas, todos os dias",
+    "servicos": [
+      "Urgência",
+      "Emergência",
+      "Observação",
+      "Odontologia"
+    ]
   },
   {
     "id": "13",
-    "no_fantasia": "UBS Encruzilhada",
-    "ds_endereco": "Rua Capibaribe, 520",
-    "no_bairro": "Encruzilhada",
-    "tp_unidade": "UBS",
-    "latitude": -8.0385,
-    "longitude": -34.9079,
+    "co_cnes": "5369169",
+    "no_fantasia": "CAPS Cléa Lacet",
+    "ds_endereco": "Rua Joaquim da Silva Caldas, 100",
+    "no_bairro": "Bongi",
+    "tp_unidade": "CAPS",
+    "latitude": -8.0661074,
+    "longitude": -34.9164192,
     "ds_horario": "Segunda a Sexta, 07h às 17h",
-    "servicos": ["Vacinação", "Consulta Clínica", "Pré-natal", "Nutrição"]
+    "servicos": [
+      "Saúde Mental",
+      "Psicologia",
+      "Grupos Terapêuticos"
+    ]
   },
   {
     "id": "14",
-    "no_fantasia": "Posto de Saúde Várzea",
-    "ds_endereco": "Rua João de Barros, 1040",
-    "no_bairro": "Várzea",
-    "tp_unidade": "Posto",
-    "latitude": -8.0527,
-    "longitude": -34.9487,
-    "ds_horario": "Segunda a Sexta, 07h às 19h",
-    "servicos": ["Vacinação", "Consulta Clínica", "Curativos", "Coleta de Exames"]
+    "co_cnes": "3371301",
+    "no_fantasia": "US 322 - Guilherme Abath",
+    "ds_endereco": "Rua Carlos Fernandes, 73",
+    "no_bairro": "Hipódromo",
+    "tp_unidade": "UBS",
+    "latitude": -8.05456,
+    "longitude": -34.881,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": [
+      "Vacinação",
+      "Consulta Clínica",
+      "Pré-natal"
+    ]
   },
   {
     "id": "15",
-    "no_fantasia": "UPA 24h Torrão",
-    "ds_endereco": "Av. Mascarenhas de Morais, 3950",
-    "no_bairro": "Imbiribeira",
-    "tp_unidade": "Urgência",
-    "latitude": -8.1001,
-    "longitude": -34.9398,
-    "ds_horario": "24 horas, todos os dias",
-    "servicos": ["Urgência", "Emergência", "Observação", "Medicamentos"]
+    "co_cnes": "3371336",
+    "no_fantasia": "US 324 - Alcides Codeceira Alto José Bonifácio",
+    "ds_endereco": "Rua Visc de Sa Bandeira, S/N",
+    "no_bairro": "Alto José Bonifácio",
+    "tp_unidade": "UBS",
+    "latitude": -8.056,
+    "longitude": -34.881,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": [
+      "Vacinação",
+      "Consulta Clínica",
+      "Pré-natal",
+      "Odontologia"
+    ]
   },
   {
     "id": "16",
-    "no_fantasia": "UBS Imbiribeira",
-    "ds_endereco": "Rua Capitão Temudo, 310",
-    "no_bairro": "Imbiribeira",
+    "co_cnes": "0184772",
+    "no_fantasia": "UPC Governador Eduardo Campos",
+    "ds_endereco": "Rua Itabira, S/N",
+    "no_bairro": "Bomba do Hemitério",
     "tp_unidade": "UBS",
-    "latitude": -8.0989,
-    "longitude": -34.9274,
+    "latitude": -8.054,
+    "longitude": -34.881,
     "ds_horario": "Segunda a Sexta, 07h às 17h",
-    "servicos": ["Vacinação", "Consulta Clínica", "Odontologia", "Pré-natal", "Puericultura"]
+    "servicos": [
+      "Vacinação",
+      "Consulta Clínica",
+      "Pré-natal"
+    ]
   },
   {
     "id": "17",
-    "no_fantasia": "CAPS Infanto-Juvenil Recife",
-    "ds_endereco": "Rua Henrique Dias, 701",
-    "no_bairro": "Derby",
-    "tp_unidade": "CAPS",
-    "latitude": -8.0562,
-    "longitude": -34.8998,
+    "co_cnes": "0022268",
+    "no_fantasia": "US 244 - Prof. Antônio Francisco Areias",
+    "ds_endereco": "Av. Prof José dos Anjos, S/N",
+    "no_bairro": "Arruda",
+    "tp_unidade": "UBS",
+    "latitude": -8.0260334,
+    "longitude": -34.9054918,
     "ds_horario": "Segunda a Sexta, 07h às 17h",
-    "servicos": ["Saúde Mental", "Psicologia", "Fonoaudiologia", "Terapia Ocupacional"]
+    "servicos": [
+      "Vacinação",
+      "Consulta Clínica",
+      "Pré-natal",
+      "Odontologia"
+    ]
   },
   {
     "id": "18",
-    "no_fantasia": "UBS Peixinhos",
-    "ds_endereco": "Rua São Paulo, 88",
-    "no_bairro": "Peixinhos",
+    "co_cnes": "0022438",
+    "no_fantasia": "US 245 - Planeta dos Macacos II",
+    "ds_endereco": "Av. Piracicaba, 929",
+    "no_bairro": "Jardim São Paulo",
     "tp_unidade": "UBS",
-    "latitude": -7.9922,
-    "longitude": -34.8948,
-    "ds_horario": "Segunda a Sexta, 07h às 17h",
-    "servicos": ["Vacinação", "Consulta Clínica", "Curativos"]
+    "latitude": -8.053,
+    "longitude": -34.881,
+    "ds_horario": "Segunda a Sexta, 07h às 22h",
+    "servicos": [
+      "Vacinação",
+      "Consulta Clínica",
+      "Pré-natal",
+      "Odontologia"
+    ]
   },
   {
     "id": "19",
-    "no_fantasia": "Posto de Saúde Cajueiro Seco",
-    "ds_endereco": "Rua Benedita Maria, 150",
-    "no_bairro": "Cajueiro Seco",
-    "tp_unidade": "Posto",
-    "latitude": -8.1631,
-    "longitude": -35.0052,
+    "co_cnes": "0022470",
+    "no_fantasia": "US 230 - Lagoa Encantada",
+    "ds_endereco": "Av. Benigno Jordão de Vasconcelos, S/N",
+    "no_bairro": "COHAB",
+    "tp_unidade": "UBS",
+    "latitude": -8.05456,
+    "longitude": -34.8806,
     "ds_horario": "Segunda a Sexta, 07h às 17h",
-    "servicos": ["Vacinação", "Consulta Clínica", "Aferição de Pressão"]
+    "servicos": [
+      "Vacinação",
+      "Consulta Clínica",
+      "Pré-natal",
+      "Odontologia"
+    ]
   },
   {
     "id": "20",
-    "no_fantasia": "UBS Alto José do Pinho",
-    "ds_endereco": "Rua das Ameixeiras, 300",
+    "co_cnes": "0026301",
+    "no_fantasia": "US 261 - Ednaldo P. Vasconcelos Alto do Eucalipto",
+    "ds_endereco": "Rua Camboriú, S/N",
+    "no_bairro": "Vasco da Gama",
+    "tp_unidade": "UBS",
+    "latitude": -8.0075737,
+    "longitude": -34.9169705,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": [
+      "Vacinação",
+      "Consulta Clínica",
+      "Pré-natal",
+      "Odontologia"
+    ]
+  },
+  {
+    "id": "21",
+    "co_cnes": "3301974",
+    "no_fantasia": "US 302 - Byron Sarinho",
+    "ds_endereco": "Rua Nazaré, 293",
+    "no_bairro": "Água Fria",
+    "tp_unidade": "UBS",
+    "latitude": -8.0515242,
+    "longitude": -34.9229956,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": [
+      "Vacinação",
+      "Consulta Clínica",
+      "Pré-natal",
+      "Odontologia"
+    ]
+  },
+  {
+    "id": "22",
+    "co_cnes": "3302016",
+    "no_fantasia": "CAPS AD Prof. Luiz Cerqueira",
+    "ds_endereco": "Rua Alvares de Azevedo, 80",
+    "no_bairro": "Santo Amaro",
+    "tp_unidade": "CAPS",
+    "latitude": -8.0498788,
+    "longitude": -34.889253187250894,
+    "ds_horario": "24 horas, todos os dias",
+    "servicos": [
+      "Saúde Mental",
+      "Psicologia",
+      "Grupos Terapêuticos"
+    ]
+  },
+  {
+    "id": "23",
+    "co_cnes": "3302040",
+    "no_fantasia": "CAPS AD Prof. José Lucena",
+    "ds_endereco": "Rua Santos Cosme e Damiao, 186",
+    "no_bairro": "IPSEP",
+    "tp_unidade": "CAPS",
+    "latitude": -8.1091221,
+    "longitude": -34.918554,
+    "ds_horario": "Segunda a Sexta, 07h às 22h",
+    "servicos": [
+      "Saúde Mental",
+      "Psicologia",
+      "Grupos Terapêuticos"
+    ]
+  },
+  {
+    "id": "24",
+    "co_cnes": "3703223",
+    "no_fantasia": "US 331 - Prof. Amaury de Medeiros",
+    "ds_endereco": "Rua Roraima, 102",
+    "no_bairro": "UR 07 Várzea",
+    "tp_unidade": "UBS",
+    "latitude": -8.052,
+    "longitude": -34.885,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": [
+      "Vacinação",
+      "Consulta Clínica",
+      "Pré-natal",
+      "Odontologia"
+    ]
+  },
+  {
+    "id": "25",
+    "co_cnes": "0028657",
+    "no_fantasia": "CAPS Esperança",
+    "ds_endereco": "Rua José Carvalheira, 415",
+    "no_bairro": "Tamarineira",
+    "tp_unidade": "CAPS",
+    "latitude": -8.028533750000001,
+    "longitude": -34.90304839917309,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": [
+      "Saúde Mental",
+      "Psicologia",
+      "Grupos Terapêuticos"
+    ]
+  },
+  {
+    "id": "26",
+    "co_cnes": "2637294",
+    "no_fantasia": "CAPS José Carlos Souto",
+    "ds_endereco": "Rua Djalma Farias, 135",
+    "no_bairro": "Torrão",
+    "tp_unidade": "CAPS",
+    "latitude": -8.0403353,
+    "longitude": -34.8851115,
+    "ds_horario": "Segunda a Sexta, 07h às 22h",
+    "servicos": [
+      "Saúde Mental",
+      "Psicologia",
+      "Grupos Terapêuticos"
+    ]
+  },
+  {
+    "id": "27",
+    "co_cnes": "2679779",
+    "no_fantasia": "US 287 - Alto José do Pinho",
+    "ds_endereco": "Rua Maragogi, 5",
     "no_bairro": "Alto José do Pinho",
     "tp_unidade": "UBS",
-    "latitude": -8.0147,
-    "longitude": -34.9398,
+    "latitude": -8.0220133,
+    "longitude": -34.90762,
     "ds_horario": "Segunda a Sexta, 07h às 17h",
-    "servicos": ["Vacinação", "Consulta Clínica", "Pré-natal", "Odontologia"]
+    "servicos": [
+      "Vacinação",
+      "Consulta Clínica",
+      "Pré-natal",
+      "Odontologia"
+    ]
+  },
+  {
+    "id": "28",
+    "co_cnes": "0000612",
+    "no_fantasia": "US 162 - Policlínica Albert Sabin",
+    "ds_endereco": "Rua Conego Barata, S/N",
+    "no_bairro": "Tamarineira",
+    "tp_unidade": "Policlínica",
+    "latitude": -8.0295267,
+    "longitude": -34.9004764,
+    "ds_horario": "Segunda a Sexta, 07h às 22h",
+    "servicos": [
+      "Consultas Especializadas",
+      "Exames",
+      "Encaminhamentos SUS"
+    ]
+  },
+  {
+    "id": "29",
+    "co_cnes": "6897029",
+    "no_fantasia": "US 376 - Policlínica Salomao Kelner",
+    "ds_endereco": "Estrada Velha de Água Fria, S/N",
+    "no_bairro": "Água Fria",
+    "tp_unidade": "Policlínica",
+    "latitude": -8.0204932,
+    "longitude": -34.8956713,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": [
+      "Consultas Especializadas",
+      "Exames",
+      "Encaminhamentos SUS"
+    ]
+  },
+  {
+    "id": "30",
+    "co_cnes": "0000507",
+    "no_fantasia": "US 160 - Policlínica Gouveia de Barros",
+    "ds_endereco": "Praca da Paz, S/N",
+    "no_bairro": "Afogados",
+    "tp_unidade": "Policlínica",
+    "latitude": -8.0807531,
+    "longitude": -34.9063223,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": [
+      "Consultas Especializadas",
+      "Exames",
+      "Encaminhamentos SUS"
+    ]
+  },
+  {
+    "id": "31",
+    "co_cnes": "0000590",
+    "no_fantasia": "US 128 - Policlínica Lessa de Andrade",
+    "ds_endereco": "Estrada dos Remedios, 2416",
+    "no_bairro": "Madalena",
+    "tp_unidade": "Policlínica",
+    "latitude": -8.058802400000001,
+    "longitude": -34.90687172590003,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": [
+      "Consultas Especializadas",
+      "Exames",
+      "Encaminhamentos SUS"
+    ]
+  },
+  {
+    "id": "32",
+    "co_cnes": "3037096",
+    "no_fantasia": "US 293 - Policlínica Do Pina",
+    "ds_endereco": "Av. Republica do Libano, 355",
+    "no_bairro": "Pina",
+    "tp_unidade": "Policlínica",
+    "latitude": -8.062333,
+    "longitude": -34.8823655,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": [
+      "Consultas Especializadas",
+      "Exames",
+      "Encaminhamentos SUS"
+    ]
+  },
+  {
+    "id": "33",
+    "co_cnes": "0000620",
+    "no_fantasia": "US 101 - Policlínica Prof Waldemar de Oliveira",
+    "ds_endereco": "Rua Marques do Pombal, 115",
+    "no_bairro": "Santo Amaro",
+    "tp_unidade": "Policlínica",
+    "latitude": -8.056,
+    "longitude": -34.89,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": [
+      "Consultas Especializadas",
+      "Exames",
+      "Encaminhamentos SUS"
+    ]
+  },
+  {
+    "id": "34",
+    "co_cnes": "0000604",
+    "no_fantasia": "US 169 - Policlínica Amaury Coutinho",
+    "ds_endereco": "Rua Iguatu, S/N",
+    "no_bairro": "Campina do Barreto",
+    "tp_unidade": "Policlínica",
+    "latitude": -8.0163644,
+    "longitude": -34.8825373,
+    "ds_horario": "24 horas, todos os dias",
+    "servicos": [
+      "Consultas Especializadas",
+      "Exames",
+      "Encaminhamentos SUS"
+    ]
+  },
+  {
+    "id": "35",
+    "co_cnes": "0000531",
+    "no_fantasia": "US 159 - Policlínica Agamenon Magalhaes",
+    "ds_endereco": "Praca da Paz, S/N",
+    "no_bairro": "Afogados",
+    "tp_unidade": "Policlínica",
+    "latitude": -8.0807531,
+    "longitude": -34.9063223,
+    "ds_horario": "24 horas, todos os dias",
+    "servicos": [
+      "Consultas Especializadas",
+      "Exames",
+      "Encaminhamentos SUS"
+    ]
+  },
+  {
+    "id": "36",
+    "co_cnes": "0000647",
+    "no_fantasia": "US 144 - Policlínica Clementino Fraga",
+    "ds_endereco": "Rua Japaratuba, 260",
+    "no_bairro": "Vasco da Gama",
+    "tp_unidade": "Policlínica",
+    "latitude": -8.019411850000001,
+    "longitude": -34.919800228028,
+    "ds_horario": "Segunda a Sexta, 07h às 22h",
+    "servicos": [
+      "Consultas Especializadas",
+      "Exames",
+      "Encaminhamentos SUS"
+    ]
+  },
+  {
+    "id": "37",
+    "co_cnes": "0001139",
+    "no_fantasia": "US 166 - Policlínica Centro",
+    "ds_endereco": "Rua 1 de Marco, 90",
+    "no_bairro": "Santo Antônio",
+    "tp_unidade": "Policlínica",
+    "latitude": -8.062654,
+    "longitude": -34.8654,
+    "ds_horario": "Segunda a Sexta, 07h às 17h",
+    "servicos": [
+      "Consultas Especializadas",
+      "Exames",
+      "Encaminhamentos SUS"
+    ]
   }
 ]

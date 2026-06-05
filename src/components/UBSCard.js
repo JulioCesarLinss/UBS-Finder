@@ -4,9 +4,11 @@ import { Ionicons } from '@expo/vector-icons';
 import { COLORS } from '../constants/colors';
 import { TIPO_CORES } from '../constants/tipos';
 import { formatarDistancia } from '../utils/distancia';
+import { labelAberto } from '../utils/horario';
 
 export default function UBSCard({ item, onPress }) {
   const corTipo = TIPO_CORES[item.tp_unidade] || COLORS.primary;
+  const statusAberto = labelAberto(item.ds_horario);
 
   return (
     <TouchableOpacity
@@ -38,14 +40,24 @@ export default function UBSCard({ item, onPress }) {
               {item.ds_horario}
             </Text>
           </View>
-          {item.distanciaKm !== undefined && (
-            <View style={styles.distanciaTag}>
-              <Ionicons name="navigate-outline" size={13} color={COLORS.primary} />
-              <Text style={styles.distanciaTexto}>
-                {formatarDistancia(item.distanciaKm)}
-              </Text>
-            </View>
-          )}
+          <View style={styles.tags}>
+            {statusAberto && (
+              <View style={[styles.statusTag, { backgroundColor: statusAberto.cor + '22' }]}>
+                <View style={[styles.statusDot, { backgroundColor: statusAberto.cor }]} />
+                <Text style={[styles.statusTexto, { color: statusAberto.cor }]}>
+                  {statusAberto.texto}
+                </Text>
+              </View>
+            )}
+            {item.distanciaKm !== undefined && (
+              <View style={styles.distanciaTag}>
+                <Ionicons name="navigate-outline" size={13} color={COLORS.primary} />
+                <Text style={styles.distanciaTexto}>
+                  {formatarDistancia(item.distanciaKm)}
+                </Text>
+              </View>
+            )}
+          </View>
         </View>
       </View>
     </TouchableOpacity>
@@ -112,6 +124,29 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     gap: 8,
+  },
+  tags: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    flexShrink: 0,
+  },
+  statusTag: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 20,
+  },
+  statusDot: {
+    width: 7,
+    height: 7,
+    borderRadius: 4,
+  },
+  statusTexto: {
+    fontSize: 11,
+    fontWeight: '700',
   },
   distanciaTag: {
     flexDirection: 'row',
