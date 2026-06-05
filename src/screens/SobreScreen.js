@@ -49,6 +49,17 @@ export default function SobreScreen() {
           </Text>
         </View>
 
+        {/* Card Policlínica */}
+        <View style={styles.card}>
+          <View style={styles.cardTitulo}>
+            <Ionicons name="business-outline" size={20} color={COLORS.tipoPoliclinica} />
+            <Text style={[styles.tituloSecao, { color: COLORS.tipoPoliclinica }]}>O que é uma Policlínica?</Text>
+          </View>
+          <Text style={styles.paragrafo}>
+            A Policlínica é uma unidade pública do SUS com múltiplas especialidades médicas num mesmo lugar — cardiologia, ortopedia, ginecologia, entre outras. Atende pacientes geralmente encaminhados pela UBS que precisam de consulta especializada gratuita.
+          </Text>
+        </View>
+
         {/* Card CAPS */}
         <View style={styles.card}>
           <View style={styles.cardTitulo}>
