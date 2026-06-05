@@ -4,6 +4,9 @@ node_modules/
 # Base de dados CNES (arquivos grandes, não vão pro repositório)
 base_de_dados/
 
+# Scripts utilitários de geração de dados
+scripts/
+
 # Expo
 .expo/
 dist/
